@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block titulo %} Lanche do Gui{% endblock %}
+{% block conteudo %}
+    <br>
+    <h2>Pedido</h2>
+    <hr>
+	<form class="margem" method='POST' action=''>{% csrf_token %}
+        <h3>Cancelar este pedido?</h3>
+        <input class="btn btn-danger" type="submit" value='Sim'/>
+        <a href="{% url 'inicio' %}"><div class="btn btn-success">Não</div></a>
+    </form>
+{% endblock %}

@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block titulo %} Lanche do Gui{% endblock %}
+{% block conteudo %}
+<div class="margem">
+    <a class="btn btn-primary" href="{% url 'novopedido' %}" role="button">Novo Pedido</a>
+    <!-- <form method='POST' action=''>{% csrf_token %}
+        <div class="col-4">
+            {{form.cliente | as_crispy_field }}
+            {{form.gerar_pedido | as_crispy_field }}
+        </div>
+        <div class="col">
+            <input class="btn btn-primary" type="submit" value='Gerar Pedido'/>
+        </div>
+    </form> -->
+    <br>
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li>{% if message.tag %} class="{{ message.tags }}" {% endif %} {{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <hr>
+    <div class="row">
+        <div class="col-7">
+            <h2>Pedidos</h2>
+            <a href="{% url 'recibo' %}">Gerar Pedido</a>
+        </div>
+        <div class="col-5">
+            
+        </div>
+        
+    </div>
+    <hr>
+    <form method="POST" action=""> {% csrf_token %}
+   </form>
+    <br><br>
+    <table class="table">
+            <tr>
+                    <th></th>
+                    <th>Pedido</th>
+                    <th>Data</th>
+                    <th>Cliente</th>
+                    <th>Total</th>
+                    <th>Entrega</th>
+                    <th>Cancelar</th>
+            </tr>
+    {% for item in queryset %}
+            <tr>
+                    <td>{{forloop.counter}}</td>
+                    <td>{{item.id}}</td>
+                    <td>{{item.data}}</td>
+                    <td><a href="{% url 'atualizapedido' item.id %}">{{item.cliente}}</a></td>
+                    <td>{{item.total}}</td>
+                    <td>{% if item.entrega == True %} Sim {% else %} Não {% endif %}</td>
+                    <td><a href="{% url 'apagapedido' item.id %}">Cancelar</a></td>
+            </tr>
+    {% endfor %}
+    </table>
+    <hr>
+</div>
+
+{% endblock %}

@@ -1,0 +1,1037 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block titulo %} Lanche do Gui{% endblock %}
+{% block conteudo %}
+    <br>
+    <h2>Cliente</h2>
+    <hr>
+	<form class="margem" method='POST' action=''>{% csrf_token %}
+        <div class="row">
+            <div class="col-8">
+                {{form.cliente | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.total | as_crispy_field }}
+            </div>
+        </div>
+        <div class="row">
+            {{form.entrega | as_crispy_field }}
+        </div>
+        <br>
+        <h2>Lanche</h2>
+        <hr>
+		<div class="row">
+            <div class="col-4">
+                {{form.l1_lanche | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l1_preco_lanche | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l1_quant_lanche | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l1_total_lanche | as_crispy_field }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                {{form.l1_alface | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l1_tomate | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l1_maionese | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l1_hellmanns | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l1_pure | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l1_milho | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l1_cheddar | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l1_catupiry | as_crispy_field }}
+            </div>
+            <div class="col-4">
+                {{form.l1_anel | as_crispy_field }}
+            </div>
+            <div class="col-4">
+                {{form.l1_adicional_maionese | as_crispy_field }}
+            </div>
+        </div>
+        <button id='linhalanche2' class="btn btn-primary" type="button">Outro Lanche</button>
+        <div class="row">
+            <div class="col-4">
+                {{form.l2_lanche | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l2_preco_lanche | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l2_quant_lanche | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l2_total_lanche | as_crispy_field }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                {{form.l2_alface | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l2_tomate | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l2_maionese | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l2_hellmanns | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l2_pure | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l2_milho | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l2_cheddar | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l2_catupiry | as_crispy_field }}
+            </div>
+            <div class="col-4">
+                {{form.l2_anel | as_crispy_field }}
+            </div>
+            <div class="col-4">
+                {{form.l2_adicional_maionese | as_crispy_field }}
+            </div>
+        </div>
+        <button id='linhalanche3' class="btn btn-primary" type="button">Outro Lanche</button>
+        <div class="row">
+            <div class="col-4">
+                {{form.l3_lanche | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l3_preco_lanche | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l3_quant_lanche | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l3_total_lanche | as_crispy_field }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                {{form.l3_alface | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l3_tomate | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l3_maionese | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l3_hellmanns | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l3_pure | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l3_milho | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l3_cheddar | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l3_catupiry | as_crispy_field }}
+            </div>
+            <div class="col-4">
+                {{form.l3_anel | as_crispy_field }}
+            </div>
+            <div class="col-4">
+                {{form.l3_adicional_maionese | as_crispy_field }}
+            </div>
+        </div>
+        <button id='linhalanche4' class="btn btn-primary" type="button">Outro Lanche</button>
+        <div class="row">
+            <div class="col-4">
+                {{form.l4_lanche | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l4_preco_lanche | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l4_quant_lanche | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l4_total_lanche | as_crispy_field }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                {{form.l4_alface | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l4_tomate | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l4_maionese | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l4_hellmanns | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l4_pure | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l4_milho | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l4_cheddar | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l4_catupiry | as_crispy_field }}
+            </div>
+            <div class="col-4">
+                {{form.l4_anel | as_crispy_field }}
+            </div>
+            <div class="col-4">
+                {{form.l4_adicional_maionese | as_crispy_field }}
+            </div>
+        </div>
+        <button id='linhalanche5' class="btn btn-primary" type="button">Outro Lanche</button>
+        <div class="row">
+            <div class="col-4">
+                {{form.l5_lanche | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l5_preco_lanche | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l5_quant_lanche | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l5_total_lanche | as_crispy_field }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                {{form.l5_alface | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l5_tomate | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l5_maionese | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l5_hellmanns | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l5_pure | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l5_milho | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l5_cheddar | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l5_catupiry | as_crispy_field }}
+            </div>
+            <div class="col-4">
+                {{form.l5_anel | as_crispy_field }}
+            </div>
+            <div class="col-4">
+                {{form.l5_adicional_maionese | as_crispy_field }}
+            </div>
+        </div>
+        <button id='linhalanche6' class="btn btn-primary" type="button">Outro Lanche</button>
+        <div class="row">
+            <div class="col-4">
+                {{form.l6_lanche | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l6_preco_lanche | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l6_quant_lanche | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l6_total_lanche | as_crispy_field }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                {{form.l6_alface | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l6_tomate | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l6_maionese | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l6_hellmanns | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l6_pure | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l6_milho | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l6_cheddar | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l6_catupiry | as_crispy_field }}
+            </div>
+            <div class="col-4">
+                {{form.l6_anel | as_crispy_field }}
+            </div>
+            <div class="col-4">
+                {{form.l6_adicional_maionese | as_crispy_field }}
+            </div>
+        </div>
+        <button id='linhalanche7' class="btn btn-primary" type="button">Outro Lanche</button>
+        <div class="row">
+            <div class="col-4">
+                {{form.l7_lanche | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l7_preco_lanche | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l7_quant_lanche | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l7_total_lanche | as_crispy_field }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                {{form.l7_alface | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l7_tomate | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l7_maionese | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l7_hellmanns | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l7_pure | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l7_milho | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l7_cheddar | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l7_catupiry | as_crispy_field }}
+            </div>
+            <div class="col-4">
+                {{form.l7_anel | as_crispy_field }}
+            </div>
+            <div class="col-4">
+                {{form.l7_adicional_maionese | as_crispy_field }}
+            </div>
+        </div>
+        <button id='linhalanche8' class="btn btn-primary" type="button">Outro Lanche</button>
+        <div class="row">
+            <div class="col-4">
+                {{form.l8_lanche | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l8_preco_lanche | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l8_quant_lanche | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l8_total_lanche | as_crispy_field }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                {{form.l8_alface | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l8_tomate | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l8_maionese | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l8_hellmanns | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l8_pure | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l8_milho | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l8_cheddar | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l8_catupiry | as_crispy_field }}
+            </div>
+            <div class="col-4">
+                {{form.l8_anel | as_crispy_field }}
+            </div>
+            <div class="col-4">
+                {{form.l8_adicional_maionese | as_crispy_field }}
+            </div>
+        </div>
+        <button id='linhalanche9' class="btn btn-primary" type="button">Outro Lanche</button>
+        <div class="row">
+            <div class="col-4">
+                {{form.l9_lanche | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l9_preco_lanche | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l9_quant_lanche | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l9_total_lanche | as_crispy_field }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                {{form.l9_alface | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l9_tomate | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l9_maionese | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l9_hellmanns | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l9_pure | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l9_milho | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l9_cheddar | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l9_catupiry | as_crispy_field }}
+            </div>
+            <div class="col-4">
+                {{form.l9_anel | as_crispy_field }}
+            </div>
+            <div class="col-4">
+                {{form.l9_adicional_maionese | as_crispy_field }}
+            </div>
+        </div>
+        <button id='linhalanche10' class="btn btn-primary" type="button">Outro Lanche</button>
+        <div class="row">
+            <div class="col-4">
+                {{form.l10_lanche | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l10_preco_lanche | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l10_quant_lanche | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l10_total_lanche | as_crispy_field }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                {{form.l10_alface | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l10_tomate | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l10_maionese | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l10_hellmanns | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l10_pure | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l10_milho | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l10_cheddar | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l10_catupiry | as_crispy_field }}
+            </div>
+            <div class="col-4">
+                {{form.l10_anel | as_crispy_field }}
+            </div>
+            <div class="col-4">
+                {{form.l10_adicional_maionese | as_crispy_field }}
+            </div>
+        </div>
+        <br>
+        <h2>Bebidas</h2>
+        <hr>
+        <div class="row">
+            <div class="col-4">
+                {{form.l1_bebida | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l1_preco_bebida | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l1_quant_bebida | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l1_total_bebida | as_crispy_field }}
+            </div>
+        </div>
+        <button id='linhabebida2' class="btn btn-primary" type="button">Outra Bebida</button>
+        <div class="row">
+            <div class="col-4">
+                {{form.l2_bebida | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l2_preco_bebida | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l2_quant_bebida | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l2_total_bebida | as_crispy_field }}
+            </div>
+        </div>
+        <button id='linhabebida3' class="btn btn-primary" type="button">Outra Bebida</button>
+        <div class="row">
+            <div class="col-4">
+                {{form.l3_bebida | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l3_preco_bebida | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l3_quant_bebida | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l3_total_bebida | as_crispy_field }}
+            </div>
+        </div>
+        <button id='linhabebida4' class="btn btn-primary" type="button">Outra Bebida</button>
+        <div class="row">
+            <div class="col-4">
+                {{form.l4_bebida | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l4_preco_bebida | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l4_quant_bebida | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l4_total_bebida | as_crispy_field }}
+            </div>
+        </div>
+        <button id='linhabebida5' class="btn btn-primary" type="button">Outra Bebida</button>
+        <div class="row">
+            <div class="col-4">
+                {{form.l5_bebida | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l5_preco_bebida | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l5_quant_bebida | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l5_total_bebida | as_crispy_field }}
+            </div>
+        </div>
+        <button id='linhabebida6' class="btn btn-primary" type="button">Outra Bebida</button>
+        <div class="row">
+            <div class="col-4">
+                {{form.l6_bebida | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l6_preco_bebida | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l6_quant_bebida | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l6_total_bebida | as_crispy_field }}
+            </div>
+        </div>
+        <button id='linhabebida7' class="btn btn-primary" type="button">Outra Bebida</button>
+        <div class="row">
+            <div class="col-4">
+                {{form.l7_bebida | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l7_preco_bebida | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l7_quant_bebida | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l7_total_bebida | as_crispy_field }}
+            </div>
+        </div>
+        <button id='linhabebida8' class="btn btn-primary" type="button">Outra Bebida</button>
+        <div class="row">
+            <div class="col-4">
+                {{form.l8_bebida | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l8_preco_bebida | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l8_quant_bebida | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l8_total_bebida | as_crispy_field }}
+            </div>
+        </div>
+        <button id='linhabebida9' class="btn btn-primary" type="button">Outra Bebida</button>
+        <div class="row">
+            <div class="col-4">
+                {{form.l9_bebida | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l9_preco_bebida | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l9_quant_bebida | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l9_total_bebida | as_crispy_field }}
+            </div>
+        </div>
+        <button id='linhabebida10' class="btn btn-primary" type="button">Outra Bebida</button>
+        <div class="row">
+            <div class="col-4">
+                {{form.l10_bebida | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l10_preco_bebida | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l10_quant_bebida | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l10_total_bebida | as_crispy_field }}
+            </div>
+        </div>
+        <br>
+        <h2>Porção</h2>
+        <hr>
+        <div class="row">
+            <div class="col-4">
+                {{form.l1_porcao | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l1_preco_porcao | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l1_quant_porcao | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l1_total_porcao | as_crispy_field }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                {{form.l1_bacon | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l1_cheddarp | as_crispy_field }}
+            </div>
+        </div>
+        <button id='linhaporcao2' class="btn btn-primary" type="button">Outra Porção</button>
+        <div class="row">
+            <div class="col-4">
+                {{form.l2_porcao | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l2_preco_porcao | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l2_quant_porcao | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l2_total_porcao | as_crispy_field }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                {{form.l2_bacon | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l2_cheddarp | as_crispy_field }}
+            </div>
+        </div>
+        <button id='linhaporcao3' class="btn btn-primary" type="button">Outra Porção</button>
+        <div class="row">
+            <div class="col-4">
+                {{form.l3_porcao | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l3_preco_porcao | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l3_quant_porcao | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l3_total_porcao | as_crispy_field }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                {{form.l3_bacon | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l3_cheddarp | as_crispy_field }}
+            </div>
+        </div>
+        <button id='linhaporcao4' class="btn btn-primary" type="button">Outra Porção</button>
+        <div class="row">
+            <div class="col-4">
+                {{form.l4_porcao | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l4_preco_porcao | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l4_quant_porcao | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l4_total_porcao | as_crispy_field }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                {{form.l4_bacon | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l4_cheddarp | as_crispy_field }}
+            </div>
+        </div>
+        <button id='linhaporcao5' class="btn btn-primary" type="button">Outra Porção</button>
+        <div class="row">
+            <div class="col-4">
+                {{form.l5_porcao | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l5_preco_porcao | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l5_quant_porcao | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l5_total_porcao | as_crispy_field }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                {{form.l5_bacon | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l5_cheddarp | as_crispy_field }}
+            </div>
+        </div>
+        <button id='linhaporcao6' class="btn btn-primary" type="button">Outra Porção</button>
+        <div class="row">
+            <div class="col-4">
+                {{form.l6_porcao | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l6_preco_porcao | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l6_quant_porcao | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l6_total_porcao | as_crispy_field }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                {{form.l6_bacon | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l6_cheddarp | as_crispy_field }}
+            </div>
+        </div>
+        <button id='linhaporcao7' class="btn btn-primary" type="button">Outra Porção</button>
+        <div class="row">
+            <div class="col-4">
+                {{form.l7_porcao | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l7_preco_porcao | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l7_quant_porcao | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l7_total_porcao | as_crispy_field }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                {{form.l7_bacon | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l7_cheddarp | as_crispy_field }}
+            </div>
+        </div>
+        <button id='linhaporcao8' class="btn btn-primary" type="button">Outra Porção</button>
+        <div class="row">
+            <div class="col-4">
+                {{form.l8_porcao | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l8_preco_porcao | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l8_quant_porcao | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l8_total_porcao | as_crispy_field }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                {{form.l8_bacon | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l8_cheddarp | as_crispy_field }}
+            </div>
+        </div>
+        <button id='linhaporcao9' class="btn btn-primary" type="button">Outra Porção</button>
+        <div class="row">
+            <div class="col-4">
+                {{form.l9_porcao | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l9_preco_porcao | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l9_quant_porcao | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l9_total_porcao | as_crispy_field }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                {{form.l9_bacon | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l9_cheddarp | as_crispy_field }}
+            </div>
+        </div>
+        <button id='linhaporcao10' class="btn btn-primary" type="button">Outra Porção</button>
+        <div class="row">
+            <div class="col-4">
+                {{form.l10_porcao | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l10_preco_porcao | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l10_quant_porcao | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l10_total_porcao | as_crispy_field }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                {{form.l10_bacon | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l10_cheddarp | as_crispy_field }}
+            </div>
+        </div>
+        <br>
+        <h2>Açaí</h2>
+        <hr>
+        <div class="row">
+            <div class="col-4">
+                {{form.l1_acai | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l1_preco_acai | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l1_quant_acai | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l1_total_acai | as_crispy_field }}
+            </div>
+        </div>
+        <button id='linhaacai2' class="btn btn-primary" type="button">Outro Açaí</button>
+        <div class="row">
+            <div class="col-4">
+                {{form.l2_acai | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l2_preco_acai | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l2_quant_acai | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l2_total_acai | as_crispy_field }}
+            </div>
+        </div>
+        <button id='linhaacai3' class="btn btn-primary" type="button">Outro Açaí</button>
+        <div class="row">
+            <div class="col-4">
+                {{form.l3_acai | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l3_preco_acai | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l3_quant_acai | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l3_total_acai | as_crispy_field }}
+            </div>
+        </div>
+        <button id='linhaacai4' class="btn btn-primary" type="button">Outro Açaí</button>
+        <div class="row">
+            <div class="col-4">
+                {{form.l4_acai | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l4_preco_acai | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l4_quant_acai | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l4_total_acai | as_crispy_field }}
+            </div>
+        </div>
+        <button id='linhaacai5' class="btn btn-primary" type="button">Outro Açaí</button>
+        <div class="row">
+            <div class="col-4">
+                {{form.l5_acai | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l5_preco_acai | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l5_quant_acai | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l5_total_acai | as_crispy_field }}
+            </div>
+        </div>
+        <button id='linhaacai6' class="btn btn-primary" type="button">Outro Açaí</button>
+        <div class="row">
+            <div class="col-4">
+                {{form.l6_acai | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l6_preco_acai | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l6_quant_acai | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l6_total_acai | as_crispy_field }}
+            </div>
+        </div>
+        <button id='linhaacai7' class="btn btn-primary" type="button">Outro Açaí</button>
+        <div class="row">
+            <div class="col-4">
+                {{form.l7_acai | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l7_preco_acai | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l7_quant_acai | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l7_total_acai | as_crispy_field }}
+            </div>
+        </div>
+        <button id='linhaacai8' class="btn btn-primary" type="button">Outro Açaí</button>
+        <div class="row">
+            <div class="col-4">
+                {{form.l8_acai | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l8_preco_acai | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l8_quant_acai | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l8_total_acai | as_crispy_field }}
+            </div>
+        </div>
+        <button id='linhaacai9' class="btn btn-primary" type="button">Outro Açaí</button>
+        <div class="row">
+            <div class="col-4">
+                {{form.l9_acai | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l9_preco_acai | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l9_quant_acai | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l9_total_acai | as_crispy_field }}
+            </div>
+        </div>
+        <button id='linhaacai10' class="btn btn-primary" type="button">Outro Açaí</button>
+        <div class="row">
+            <div class="col-4">
+                {{form.l10_acai | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l10_preco_acai | as_crispy_field }}
+            </div>
+            <div class="col-2">
+                {{form.l10_quant_acai | as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{form.l10_total_acai | as_crispy_field }}
+            </div>
+        </div>
+        <div class="row">
+            {{form.obs | as_crispy_field}}
+        </div>
+        <hr>
+        <input class="btn btn-primary" type="submit" value='Registrar'/>
+    </form>
+    <a href="#" class="scrollToTop">Início</a>
+{% endblock %}
